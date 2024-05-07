@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "./axios";
-import instance from "./axios";
 import "./row.css";
 import YouTube from "react-youtube";
-import requests from "./request";
 import movieTrailer from "movie-trailer";
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
@@ -20,7 +18,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   }, [fetchUrl]);
 
   const handleClick = (movie) => {
-    const playingNow=document.querySelector("div.playing-now");
+    const playingNow = document.querySelector("div.playing-now");
     if (trailerUrl && playingNow) {
       playingNow.classList?.remove("playing-now");
       setTrailerUrl("");
@@ -38,7 +36,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
         movie_player.classList.add("playing-now");
       }
     }
-
   };
   const opts = {
     height: "390",
