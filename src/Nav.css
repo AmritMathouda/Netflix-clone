@@ -1,0 +1,31 @@
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    z-index: 11;
+    align-items: center;
+    height: 7vh;
+    transition: all 1s;
+}
+.nav-back{
+    background-color: #111;
+}
+.nav_logo{
+    width: 100px;
+    position: relative;
+    left: 25px;
+}
+.nav_avatar{
+    height: 35px;
+    position: absolute;
+    right: 20px;
+}
+@media screen and (min-width: 768px){
+    .nav_logo{
+        left: 60px;
+    }
+    .nav_avatar{
+        right: 60px;
+    }
+}

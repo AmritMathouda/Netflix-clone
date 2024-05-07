@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  scroll-behavior: smooth;
+}
+.app{
+    background-color: #111;
+}
+.row_container{
+}
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #282828;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #383838;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #424242;
+}
+.banner_contents, .row{
+  padding-left:20px;
+}
+@media screen and (min-width: 768px) {
+  .banner_contents, .row{
+    padding-left:60px;
+  }
+}
