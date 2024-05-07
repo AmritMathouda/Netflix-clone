@@ -20,16 +20,19 @@ function Banner() {
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
-  setTimeout(()=>{
-    document.querySelector(".banner_title").style = "transform:scale(0.6) translate3d(0px, 200px, 0px)";
-    document.querySelector(".banner_dec_container").style="transform:translate3d(0px, 150px, 0px)";
-    document.querySelector(".banner_description").style="opacity:0"
-  },500)
+  setTimeout(() => {
+    document.querySelector(".banner_title").style =
+      "transform:scale(0.6) translate3d(0px, 200px, 0px)";
+    document.querySelector(".banner_dec_container").style =
+      "transform:translate3d(0px, 150px, 0px)";
+    document.querySelector(".banner_description").style = "opacity:0";
+  }, 500);
   return (
     <header>
       <div className="banner">
         <div className="banner_image">
           <img
+            alt="banner"
             id="banner_img"
             src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
           />
@@ -39,9 +42,9 @@ function Banner() {
             {movie?.title || movie?.name || movie?.original_name}
           </h1>
           <div className="banner_dec_container">
-          <h1 className="banner_description">
-            {truncate(movie?.overview, 150)}
-          </h1>
+            <h1 className="banner_description">
+              {truncate(movie?.overview, 150)}
+            </h1>
           </div>
           <div className="banner_buttons">
             <button className="banner_btnPlay">
@@ -96,8 +99,8 @@ function Banner() {
             </button>
             <button className="banner_btnList">
               <svg
-              width="25px"
-              height="25px"
+                width="25px"
+                height="25px"
                 viewBox="-0.5 0 25 25"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
